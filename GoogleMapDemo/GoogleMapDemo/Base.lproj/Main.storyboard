@@ -21,12 +21,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-7i-vIs" customClass="GMSMapView">
                                 <color key="backgroundColor" red="0.51425251110000003" green="0.61861910990000002" blue="0.1045572951" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z0-2E-mKc">
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.71764705880000002" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="GuA-7w-gde"/>
+                                    <constraint firstAttribute="height" constant="30" id="z5X-64-gyx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Change Type">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeMapTypeWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fD6-zI-fZ0"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7hN-ef-xhV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ARR-fi-JDb"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kqe-Oq-4vG"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UN4-7i-vIs" firstAttribute="top" secondItem="7hN-ef-xhV" secondAttribute="bottom" id="3XT-Sj-GaX"/>
                             <constraint firstItem="UN4-7i-vIs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="56y-qe-PCu"/>
+                            <constraint firstAttribute="trailing" secondItem="7hN-ef-xhV" secondAttribute="trailing" id="eoc-k9-m29"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UN4-7i-vIs" secondAttribute="bottom" id="fRq-iM-As9"/>
-                            <constraint firstItem="UN4-7i-vIs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="pUo-hc-gTf"/>
+                            <constraint firstItem="7hN-ef-xhV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lm2-4H-WC9"/>
+                            <constraint firstAttribute="trailing" secondItem="2Z0-2E-mKc" secondAttribute="trailing" constant="15" id="nL6-IJ-xyV"/>
+                            <constraint firstItem="2Z0-2E-mKc" firstAttribute="top" secondItem="7hN-ef-xhV" secondAttribute="bottom" constant="10" id="tMs-mx-GoY"/>
+                            <constraint firstItem="7hN-ef-xhV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xS8-Ca-DBm"/>
                             <constraint firstAttribute="trailing" secondItem="UN4-7i-vIs" secondAttribute="trailing" id="zL4-mF-0Na"/>
                         </constraints>
                     </view>
